@@ -11,19 +11,13 @@
 @media only screen and (max-width:540px) {
 }
 
-@charset "utf-8";
 /*
-  Theme: boilerplate
-  Author: Hatena Blog Team
+  Theme: remew
+  Author: remew
   Description:
-    はてなブログのデザインCSSカスタマイズの土台に適したデザインテーマです。
-    このテーマをもとにしてCSSを書くと比較的楽にカスタマイズできます。
-    特定の部分（例えば記事本文の書式やコメント欄のスタイルなど）だけをコピーして使ってもかまいません。
-    もちろんそのままの状態でも、シンプルなテーマとして使うことができます。
-    このCSSおよびLESSファイルは自由に複製・再配布できます。
-    このテーマをもとにしたデザインテーマの配布も自由です。
-
+    my hatenablog's theme
   Licensed under the MIT license.
+  Responsive: no
 */
 /*  import normalize */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
@@ -425,7 +419,7 @@ html,
 body {
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
     color: #454545;
-    background-color: #ffffff;
+    background-color: #f5f5f5;
 }
 a {
     color: #1487bd;
@@ -459,7 +453,7 @@ h6 a:visited {
 }
 a.keyword {
     text-decoration: none;
-    border-bottom: 1px dotted #dddddd;
+    border-bottom: 1px dotted #757575;
     color: #454545;
 }
 /* Buttons */
@@ -482,7 +476,6 @@ a.keyword {
     background-clip: padding-box;
     cursor: pointer;
     font-size: 12px;
-    text-decoration: none;
     font-weight: bold;
     border: 1px solid rgba(0, 0, 0, 0.2);
     text-decoration: none !important;
@@ -513,9 +506,12 @@ a.keyword {
     left: 0;
     width: 100%;
 }
+#container {
+    width: 90%;
+}
 /* container */
 #container {
-    width: 940px;
+    /*width: 940px;*/
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -536,9 +532,23 @@ a.keyword {
 .globalheader-off #container {
     padding-top: 0;
 }
+/* common */
+#main, .hatena-module {
+    padding: 16px;
+    background: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+                0 1px 8px 0 rgba(0, 0, 0, 0.12),
+                0 3px 3px -2px rgba(0, 0, 0, 0.4);
+}
+
+#main {
+    width: calc(100% - 316px);
+}
+
 /* 2カラムレイアウト */
 #main {
-    width: 600px;
+    /*width: 600px;*/
     float: left;
 }
 #box2 {
@@ -577,8 +587,8 @@ a.keyword {
 ---- END 1カラム */
 /* header */
 #blog-title {
-    margin: 30px 0;
-    padding: 20px 0;
+    margin: 32px 0 16px 0;
+    padding: 16px 0;
 }
 #title {
     margin: 0;
@@ -681,7 +691,8 @@ a.keyword {
 }
 /* entry-content の中の書式 */
 .entry-content {
-    font-size: 95%;
+    /*font-size: 95%;*/
+    font-size: 16px;
     line-height: 1.7;
     padding-bottom: 10px;
     border-bottom: 1px solid #dddddd;
@@ -698,26 +709,35 @@ a.keyword {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-    margin: 1.3em 0 0.8em 0;
     line-height: 1.5;
+    box-sizing: border-box;
 }
 .entry-content h1 {
-    font-size: 160%;
+    font-size: 26px;
+    margin: 0 0 16px 0;
+    border-bottom: dotted 1px #757575;
 }
 .entry-content h2 {
-    font-size: 150%;
+    font-size: 24px;
+    margin: 0 0 8px 0;
+    border-bottom: dotted 1px #757575;
 }
 .entry-content h3 {
-    font-size: 140%;
+    font-size: 22px;
+    margin: 0 0 4px 0;
+    border-bottom: dotted 1px #757575;
 }
 .entry-content h4 {
-    font-size: 130%;
+    font-size: 20px;
+    margin: 0;
 }
 .entry-content h5 {
-    font-size: 110%;
+    font-size: 18px;
+    margin: 0;
 }
 .entry-content h6 {
     font-size: 100%;
+    margin: 0;
 }
 .entry-content table {
     border-collapse: collapse;
@@ -736,9 +756,12 @@ a.keyword {
     background: #f5f5f5;
 }
 .entry-content blockquote {
+    box-sizing: border-box;
     border: 1px solid #dddddd;
+    border-left: 16px solid #dddddd;
+    font-style: italic;
     margin: 0 0 10px;
-    padding: 20px;
+    padding: 16px;
 }
 .entry-content blockquote p {
     margin-top: 0;
@@ -871,7 +894,11 @@ a.keyword {
     line-height: 1.5;
 }
 .hatena-module {
-    margin-bottom: 60px;
+    margin-bottom: 16px;
+}
+.hatena-follow-button-box {
+    margin: 0;
+    display: inline-block;
 }
 .hatena-module-title {
     font-weight: bold;
