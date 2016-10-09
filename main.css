@@ -418,17 +418,19 @@ th {
 html,
 body {
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
-    color: #454545;
-    background-color: #f5f5f5;
+    color: #e0e0e0;
+    background-color: #212121;
 }
 a {
     color: #1487bd;
-}
-a:hover {
-    color: #0f5373;
+    transition: 0.2s;
+    border: 1px solid transparent;
 }
 a:visited {
     color: #789dae;
+}
+a:hover {
+    color: #65c4f1;
 }
 h1 a,
 h2 a,
@@ -448,8 +450,16 @@ h3 a:visited,
 h4 a:visited,
 h5 a:visited,
 h6 a:visited {
-    color: #333333;
+    color: #fafafa;
     text-decoration: none;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+    border-bottom: 1px solid #f5f5f5;
 }
 a.keyword {
     text-decoration: none;
@@ -468,10 +478,6 @@ a.keyword {
     background-color: #ffffff;
     text-align: center;
     vertical-align: middle;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
     border-radius: 2px;
     background-clip: padding-box;
     cursor: pointer;
@@ -511,7 +517,6 @@ a.keyword {
 }
 /* container */
 #container {
-    /*width: 940px;*/
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -535,56 +540,25 @@ a.keyword {
 /* common */
 #main, .hatena-module {
     padding: 16px;
-    background: #ffffff;
+    background: #424242;
     box-sizing: border-box;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
                 0 1px 8px 0 rgba(0, 0, 0, 0.12),
                 0 3px 3px -2px rgba(0, 0, 0, 0.4);
 }
-
 #main {
-    width: calc(100% - 316px);
+    width: calc(100% - 272px);
 }
 
 /* 2カラムレイアウト */
 #main {
-    /*width: 600px;*/
     float: left;
 }
 #box2 {
-    width: 300px;
+    width: 256px;
     float: right;
 }
-/* 1カラムにしたい場合は下記のコメントアウトを外してください ----
 
-#main {
-    width: 100%;
-    float: none;
-}
-
-#box2 {
-    width: 100%;
-    float: none;
-}
-
-#box2-inner {
-    width: 960px;
-    .clearfix;
-    overflow: hidden;
-}
-
-.hatena-module {
-    text-align: left;
-    padding-right: 20px;
-    width: 300px;
-    float: left;
-
-    &:nth-child(3n+1) {
-        clear: both;
-    }
-}
-
----- END 1カラム */
 /* header */
 #blog-title {
     margin: 32px 0 16px 0;
@@ -594,12 +568,13 @@ a.keyword {
     margin: 0;
 }
 #title a {
-    color: #454545;
+    color: #fafafa;
 }
 #blog-description {
     font-weight: normal;
     font-size: 80%;
     margin: 5px 0 0 0;
+    color: #f5f5f5;
 }
 /* ヘッダ画像を設定したとき */
 .header-image-enable #title {
@@ -637,7 +612,7 @@ a.keyword {
 /* 日付 */
 .date {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-top: 8px;
 }
 .date a {
     color: #1487bd;
@@ -658,7 +633,7 @@ a.keyword {
 /* 「編集する」ボタン */
 .entry-header-menu {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: -60px;
 }
 .entry-header-menu a {
@@ -672,15 +647,10 @@ a.keyword {
     background-color: #ffffff;
     text-align: center;
     vertical-align: middle;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
     border-radius: 2px;
     background-clip: padding-box;
     cursor: pointer;
     font-size: 12px;
-    text-decoration: none;
     font-weight: bold;
     border: 1px solid rgba(0, 0, 0, 0.2);
     text-decoration: none !important;
@@ -691,7 +661,6 @@ a.keyword {
 }
 /* entry-content の中の書式 */
 .entry-content {
-    /*font-size: 95%;*/
     font-size: 16px;
     line-height: 1.7;
     padding-bottom: 10px;
@@ -709,6 +678,7 @@ a.keyword {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
+    color: #f5f5f5;
     line-height: 1.5;
     box-sizing: border-box;
 }
@@ -754,11 +724,12 @@ a.keyword {
 }
 .entry-content table th {
     background: #f5f5f5;
+    color: #454545;
 }
 .entry-content blockquote {
     box-sizing: border-box;
-    border: 1px solid #dddddd;
-    border-left: 16px solid #dddddd;
+    border: 1px solid #757575;
+    border-left: 16px solid #757575;
     font-style: italic;
     margin: 0 0 10px;
     padding: 16px;
@@ -833,10 +804,6 @@ a.keyword {
     left: 0;
     width: 50px !important;
     height: 50px !important;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
     border-radius: 3px;
     background-clip: padding-box;
 }
@@ -871,15 +838,10 @@ a.keyword {
     background-color: #ffffff;
     text-align: center;
     vertical-align: middle;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
     border-radius: 2px;
     background-clip: padding-box;
     cursor: pointer;
     font-size: 12px;
-    text-decoration: none;
     font-weight: bold;
     border: 1px solid rgba(0, 0, 0, 0.2);
     text-decoration: none !important;
@@ -906,20 +868,16 @@ a.keyword {
     font-size: 120%;
 }
 .hatena-module-title a {
-    color: #454545;
+    color: #f5f5f5;
     text-decoration: none;
 }
 .hatena-module-title a:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid #f5f5f5;
 }
 /* Profile module */
 .hatena-module-profile .profile-icon {
     float: left;
     margin: 0 10px 10px 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
     border-radius: 5px;
     background-clip: padding-box;
 }
@@ -954,10 +912,6 @@ a.keyword {
 /* Search module */
 .hatena-module-search-box .search-form {
     border: 1px solid #dddddd;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
     border-radius: 3px;
     background-clip: padding-box;
     width: 100%;
@@ -1040,7 +994,7 @@ a.keyword {
 }
 /* archive ページ */
 .page-archive .archive-entries .archive-entry {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 }
 .page-archive .archive-entries .entry-title {
     font-size: 130%;
@@ -1076,33 +1030,9 @@ a.keyword {
 }
 /* Media Queries - Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
-    #container {
-        width: 724px;
-    }
-    #main {
-        width: 460px;
-    }
-    #box2 {
-        width: 245px;
-    }
-    /* 1カラムにしたい場合は下記のコメントアウトを外してください ----
-        #main,
-        #box2 {
-            width: 100%;
-        }
-
-        #box2-inner {
-            width: 744px;
-
-        }
-
-        .hatena-module {
-            width: 228px;
-        }
-    ---- END 1カラム */
 }
 /* Media Queries - Small Tablet & Smartphone */
-@media (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
     #globalheader-container {
         position: static;
     }
@@ -1110,29 +1040,57 @@ a.keyword {
         width: 93.75%;
         word-wrap: break-word;
         overflow: hidden;
+        padding-top: 0;
     }
     #main {
         width: 100%;
-        float: none;
     }
     #box2 {
         width: 100%;
-        float: none;
+        margin-top: 16px;
     }
     #box2-inner {
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
     }
     .hatena-module {
-        width: 100%;
-        float: none;
+        text-align: left;
+        width: calc(50% - 8px);
+        margin-left: 8px;
+    }
+    .hatena-module:nth-child(2n+1) {
+        margin-left: 0;
+        margin-right: 8px;
     }
     .entry-header-menu {
         top: -30px;
-        left: 0px;
+        left: 0;
     }
 }
 /* Media Queries - Smartphone */
 @media (max-width: 480px) {
-
+    #globalheader-container {
+        position: static;
+    }
+    #container {
+        width: 93.75%;
+        word-wrap: break-word;
+        overflow: hidden;
+        padding-top: 0;
+    }
+    #main {
+        width: 100%;
+    }
+    #box2 {
+        width: 100%;
+        margin-top: 16px;
+    }
+    #title {
+        text-align: center;
+    }
+    #blog-title {
+        margin: 0;
+    }
 }
 
