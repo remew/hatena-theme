@@ -1,0 +1,20 @@
+{
+  "name": "hatena-theme",
+  "version": "0.0.0",
+  "description": "my hatenablog's theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remew/hatena-theme.git"
+  },
+  "keywords": [],
+  "author": "remew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/remew/hatena-theme/issues"
+  },
+  "homepage": "https://github.com/remew/hatena-theme#readme"
+}
