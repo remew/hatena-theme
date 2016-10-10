@@ -411,15 +411,15 @@ body {
     background-color: #212121;
 }
 a {
-    color: #1487bd;
+    color: #f44336;
     transition: 0.2s;
     border: 1px solid transparent;
 }
 a:visited {
-    color: #789dae;
+    color: #aa4c4b;
 }
 a:hover {
-    color: #65c4f1;
+    color: #ef9a9a;
 }
 h1 a,
 h2 a,
@@ -604,7 +604,7 @@ a.keyword {
     margin-top: 8px;
 }
 .date a {
-    color: #1487bd;
+    color: #f44336;
     text-decoration: none;
     font-size: 90%;
 }
