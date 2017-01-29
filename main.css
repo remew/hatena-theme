@@ -740,7 +740,7 @@ a.keyword {
     font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
 }
 .entry-content code {
-    color: #000;
+    color: #333;
     font-size: 90%;
     margin: 0 2px;
     padding: 0 5px;
